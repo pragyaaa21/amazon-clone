@@ -3,7 +3,7 @@ import {products} from '../data/products.js'
 let productsHTML='';
 
 products.forEach((product)=>{
-  productsHTML+=`<div cla ss="product-container">
+  productsHTML+=`<div class="product-container">
               <div class="product-image-container">
                 <img class="product-image"
                   src="${product.image}">
@@ -69,7 +69,7 @@ let cartQuantity=0;
 document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
   button.addEventListener('click',()=>{
     const productId=button.dataset.productId;
-    addToCart();
+    addToCart(productId);
     updateCartQuantity();
   });
 });
